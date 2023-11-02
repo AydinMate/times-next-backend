@@ -26,4 +26,6 @@ app.Use(async (ctx, next) =>
 
 app.MapGet("/get-random-multiplication", () => Multiplication.GetRandomMultiplication());
 
+
+
 app.Run();
