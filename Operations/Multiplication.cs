@@ -5,13 +5,13 @@ public class Multiplication
 
         Random random = new Random();
 
-        question.FirstNumber = random.Next(1, 13);
-        question.SecondNumber = random.Next(1, 13);
+        question.Multiplicand = random.Next(1, 13);
+        question.Multiplier = random.Next(1, 13);
 
 
         List<int> options = new List<int>();
-        question.Answer = question.FirstNumber * question.SecondNumber;
-        options.Add(question.Answer);
+        question.Product = question.Multiplicand * question.Multiplier;
+        options.Add(question.Product);
 
         for (int i = 0; i < 3; i++)
         {
@@ -20,11 +20,11 @@ public class Multiplication
 
             if (firstOrSecond == 0)
             {
-                factor = question.FirstNumber; 
+                factor = question.Multiplicand; 
             }
             else
             {
-                factor = question.SecondNumber;
+                factor = question.Multiplier;
             }
 
             int randomNumber;
