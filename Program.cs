@@ -24,8 +24,15 @@ app.Use(async (ctx, next) =>
     await next();
 });
 
-app.MapGet("/get-random-multiplication", () => Multiplication.GetRandomMultiplication());
-app.MapGet("/get-random-division", () => Division.GetRandomDivision());
+app.MapGet("/get-arithmetic-mp", () => Multiplication.GetRandomMultiplication());
+app.MapGet("/get-arithmetic-mn", () => Multiplication.GetRandomNegativeMultiplication());
+
+app.MapGet("/get-arithmetic-dp", () => Division.GetRandomDivision());
+app.MapGet("/get-arithmetic-dn", () => Division.GetRandomNegativeDivision());
+
+app.MapGet("/get-arithmetic-mdp", () => BothArithmetics.GetRandomArithmetic());
+app.MapGet("/get-arithmetic-mdn", () => BothArithmetics.GetRandomNegativeArithmetic());
+
 
 
 
